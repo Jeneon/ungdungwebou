@@ -1,0 +1,44 @@
+body{
+    margin: 0px;
+}
+main{
+    margin: 10px;
+}
+h1{
+    text-align: center;
+    text-shadow: 5px;
+    color: rgb(47, 0, 255);
+}
+.navbar ul{
+    list-style-type: none;
+    background-color: darkblue;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover{
+    color:yellow;
+}
+
+.navbar li{
+    float: left;
+}
+
+button{
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    background-color: aqua;
+   margin: 10px;
+   border: 0;
+   border-radius: 15px;
+   color: darkgreen
+}

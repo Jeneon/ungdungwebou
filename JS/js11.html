@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thay đổi kích cỡ ảnh</title>
+</head>
+    <style>
+    .large{height: 384px; width: 512px}
+    .medium{height: 192px; width: 256px}
+    .large{height: 77px; width: 102px}
+</style>
+<script>
+    function setImgSize(value){
+        document.getElementById("image").className=value;
+    }
+</script>
+<body>
+    <h1>Image Resizing</h1>
+    <hr />
+    <p id="scale">Scale:
+        <input type="radio" name="scaler" value="small" onclick="setImgSize(this.value)">100%
+        <input type="radio" name="scaler" value="medium" onclick="setImgSize(this.value)">25%
+        <input type="radio" name="scaler" value="large" checked onclick="setImgSize(this.value)">10%
+    </p>
+    <img id="image" class="large" src="../Images/6.jpg">
+    <br>
+    <a href="../javascript.html">Về lại Javascript</a>
+</body>
+</html>

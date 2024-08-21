@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="jq08.css">
+    <script>
+        $(document).ready(function(){
+            var arr=[];
+            $("ol>li").click(function(){
+                $("p#view").text($(this).text());
+            });
+            $("#no").click(function(){
+                $("#view").removeClass("shadow");
+            });
+            $("#yes").click(function(){
+                $("#view").addClass("shadow");
+            });
+            $("#textcolor").change(function(){
+                $("#view").css("color",$(this).val());
+            });
+            $("#btDel").click(function(){
+               var text = $("ol li:last").text();
+               if(text=="")return;
+               arr.unshift(text);
+               $("ol li:last").remove();
+            });
+            $("#btUndo").click(function(){
+                if(arr.length == 0) return;
+                var item= "<liv>" + arr.shift() + "</liv>" ;
+                $("ol").append(item);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <fieldset>
+                <legend>Chọn</legend>
+                <p>
+                    <input type="radio" name="shadow" id="no" checked>Chữ bình thường
+                    <br>
+                    <input type="radio" name="shadow" id="yes">Chữ có bóng<br>
+                </p>
+                <p>
+                    Chọn màu chữ: <input type="color" id="textcolor" value="0000ff">
+                    <p>
+                        <button id="btDel">Xoá phần tử cuối</button>
+                        <button id="btUndo">Phục hồi</button>
+                    </p>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Click vào một chuỗi</legend>
+                <ol id="list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>jQuery</li>
+                    <li>Javascript</li>
+                </ol>
+            </fieldset>
+        </div>
+        <div class="right">
+            <p id="view">HTML</p>
+        </div>
+    </div>
+    <br> <a href="../jQuerry.html">Quay về jQuerry</a>
+</body>
+</html>
