@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đảo chuỗi - Chuẩn hoá chuỗi</title>
+    <script>
+        function reverse() {
+            var s = document.getElementById("txtS").value;
+            arr = s.split(" ");// tach chuoi
+            var i, kq ="";
+            for(i = arr.length-1; i>=0; i--)
+            kq+= arr[i].trim() +" ";
+            document.getElementById("txtS").value= kq.trim();
+          }
+
+          function normal()
+          {
+            var s = document.getElementById("txtS").value;
+            arr = s.split(" ");// tach chuoi
+            var i, kq ="", tmp;
+            for(i=0 ; i < arr.length; i++)
+          {
+            tmp = arr[i].trim().toLowerCase();
+            if(tmp!="")
+                tmp= tmp.substr(0,1).toUpperCase() + tmp.substr(1);
+            kq+= tmp + " ";
+          }
+          document.getElementById("txtS").value = kq.trim();
+          }
+    </script>
+</head>
+<body>
+    <table>
+        <caption>Thay thế chuỗi</caption>
+        <tr>
+            <td>Chuỗi ban đầu</td>
+            <td>
+                <input type="text" id="txtS" size="50">
+            </td>
+        </tr>
+
+        <tr>
+            <td><button onclick="reverse()">Đảo chuỗi</button></td>
+            <td><button onclick="normal()">Chuẩn hoá chuỗi</button></td>
+        </tr>
+    </table>
+</body>
+</html>
