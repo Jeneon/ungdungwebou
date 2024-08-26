@@ -14,11 +14,12 @@
                 console.log(c);
                 var name;
                 switch (c)
+              switch (c)
                 {
-                    case "rgb(255, 0 0)":name="Đỏ"; break;
+                    case "rgb(255, 0, 0)": name = "Đỏ"; break;
                     case "rgb(0, 0, 255)":name="Xanh dương"; break;
-                    case "rgb(0, 255, 0":name="Xanh lá"; break;
-                    case "rgb(255, 0 ,255)":name="Tím"; break;
+                    case "rgb(0, 255, 0)":name="Xanh lá"; break;
+                    case "rgb(255, 0, 255)":name="Hồng"; break;
                 }
                 //hiển thị chuỗi kết quả
                 $("#result").html("Màu bạn chọn là "+ name + ": "+c);
